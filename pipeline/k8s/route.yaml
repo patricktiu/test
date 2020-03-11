@@ -1,0 +1,13 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: db2app1war
+  name: db2app1war
+spec:
+  port:
+    targetPort: http
+  to:
+    kind: Service
+    name: db2app1war
+    weight: 100

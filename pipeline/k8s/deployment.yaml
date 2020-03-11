@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: db2app1war
+  name: db2app1war
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: db2app1war
+  template:
+    metadata:
+      labels:
+        app: db2app1war
+    spec:
+      containers:
+        - image: docker.io/application
+          imagePullPolicy: Always
+          name: db2app1war
+          ports:
+            - containerPort: 9080
