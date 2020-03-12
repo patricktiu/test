@@ -39,7 +39,7 @@ spec:
         - build-application
       params:
         - name: manifest_dir
-          value: "manifest"
+          value: "pipeline/k8s"
 
     - name: update-application-image
       taskRef:
